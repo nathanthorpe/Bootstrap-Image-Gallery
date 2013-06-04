@@ -12,11 +12,15 @@ It features mouse and keyboard navigation, transition effects, fullscreen mode a
 ### Preparation
 
 To get your photos on there make sure its public and you have an API Key.
-You can request on here (http://www.flickr.com/services/apps/create/apply/)
+
+You can request on [here](http://www.flickr.com/services/apps/create/apply/)
 
 Put your API key under api_key and your photoset id under photoset_id.
+
 To get the photoset id you must create a set, make sure its public, go to the set, and look at the end of the url.
+
 Ex. http://www.flickr.com/photos/87973856@N04/sets/72157633918666858/
+
 72157633918666858 would be the photoset_id
 
 ```js
