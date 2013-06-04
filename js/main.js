@@ -4,6 +4,7 @@
  *
  * Copyright 2012, Sebastian Tschan
  * https://blueimp.net
+ * Modified by Nathan Thorpe
  *
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
@@ -54,23 +55,25 @@ $(function () {
 
     // Load images via flickr for demonstration purposes:
     $.ajax({
-        url: 'http://api.flickr.com/services/rest/',
+        url: 'https://secure.flickr.com/services/rest/',
         data: {
             format: 'json',
-            method: 'flickr.interestingness.getList',
-            api_key: '7617adae70159d09ba78cfec73c13be3'
+            method: 'flickr.photosets.getPhotos',
+            api_key: '7617adae70159d09ba78cfec73c13be3',
+			photoset_id: '72157633916737792',
+			extras: 'original_format'
         },
 	    dataType: 'jsonp',
         jsonp: 'jsoncallback'
     }).done(function (data) {
         var gallery = $('#gallery'),
             url;
-        $.each(data.photos.photo, function (index, photo) {
-            url = 'http://farm' + photo.farm + '.static.flickr.com/' +
-                photo.server + '/' + photo.id + '_' + photo.secret;
+        $.each(data.photoset.photo, function (index, photo) {
+            url = 'https://farm' + photo.farm + '.staticflickr.com/' +
+                photo.server + '/' + photo.id + '_';
             $('<a data-gallery="gallery"/>')
-                .append($('<img>').prop('src', url + '_s.jpg'))
-                .prop('href', url + '_b.jpg')
+                .append($('<img>').prop('src', url + photo.secret + '_s.jpg'))
+                .prop('href', url + photo.secret + '_b.jpg')
                 .prop('title', photo.title)
                 .appendTo(gallery);
         });

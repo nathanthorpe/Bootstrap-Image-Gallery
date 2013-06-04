@@ -4,6 +4,7 @@
  *
  * Copyright 2011, Sebastian Tschan
  * https://blueimp.net
+ * Modified by Nathan Thorpe
  *
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
@@ -142,8 +143,7 @@
             }, 3000);
             modal.find('.modal-title').text(this.$links[index].title);
             modal.find('.modal-download').prop(
-                'href',
-                download || url
+                'href', url
             );
             this._loadingImage = loadImage(
                 url,

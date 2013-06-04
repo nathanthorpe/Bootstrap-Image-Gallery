@@ -6,6 +6,7 @@
  *
  * Copyright 2011, Sebastian Tschan
  * https://blueimp.net
+ * Modified by Nathan Thorpe
  *
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
@@ -18,12 +19,25 @@
 <title>Bootstrap Image Gallery</title>
 <meta name="description" content="Bootstrap Image Gallery is an extension to the Modal dialog of Twitter's Bootstrap toolkit, to ease navigation between a set of gallery images. It features mouse and keyboard navigation, transition effects, fullscreen mode and slideshow functionality.">
 <meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css">
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 <!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-35251092-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </head>
 <body>
 <div class="navbar navbar-fixed-top navbar-inverse">
@@ -34,15 +48,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="https://github.com/blueimp/Bootstrap-Image-Gallery">Bootstrap Image Gallery</a>
+            <a class="brand" href="#">Nathan's Image Gallery</a>
             <div class="nav-collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#">Demo</a></li>
-                    <li><a href="https://github.com/blueimp/Bootstrap-Image-Gallery/downloads">Downloads</a></li>
-                    <li><a href="https://github.com/blueimp/Bootstrap-Image-Gallery">Source Code</a></li>
-                    <li><a href="https://github.com/blueimp/Bootstrap-Image-Gallery">Documentation</a></li>
-                    <li><a href="https://github.com/blueimp/Bootstrap-Image-Gallery/issues">Issues</a></li>
-                    <li><a href="https://blueimp.net">&copy; Sebastian Tschan</a></li>
+                    <li class="active"><a href="#">Images</a></li>
+                    <li><a href="https://nathanthorpe.info">&copy; Nathan Thorpe</a></li>
                 </ul>
             </div>
         </div>
@@ -50,11 +60,10 @@
 </div>
 <div class="container-fluid">
     <header>
-        <h1>Bootstrap Image Gallery Demo</h1>
-        <blockquote>
-            <p>Bootstrap Image Gallery is an extension to the <a href="http://twitter.github.com/bootstrap/javascript.html#modal">Modal</a> dialog of Twitter's <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> toolkit, to ease navigation between a set of gallery images.<br>
-            It features mouse and keyboard navigation, transition effects, fullscreen mode and slideshow functionality.</p>
-        </blockquote>
+        <h1>Image Gallery</h1>
+        <!--<blockquote>
+            <p>hi</p>
+        </blockquote>-->
         <p>
             <button id="start-slideshow" class="btn btn-large btn-success" data-slideshow="5000" data-target="#modal-gallery" data-selector="#gallery a[rel=gallery]">Start Slideshow</button>
             <button id="toggle-fullscreen" class="btn btn-large btn-primary" data-toggle="button">Toggle Fullscreen</button>
@@ -90,9 +99,9 @@
     </div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://blueimp.github.com/cdn/js/bootstrap.min.js"></script>
-<script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
-<script src="js/bootstrap-image-gallery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/load-image.min.js"></script>
+<script src="js/bootstrap-image-gallery.js"></script>
 <script src="js/main.js"></script>
 </body> 
 </html>
