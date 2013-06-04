@@ -74,6 +74,7 @@ $(function () {
             $('<a data-gallery="gallery"/>')
                 .append($('<img>').prop('src', url + photo.secret + '_s.jpg'))
                 .prop('href', url + photo.secret + '_b.jpg')
+				.prop('dl', url + photo.originalsecret + '_o.jpg')
                 .prop('title', photo.title)
                 .appendTo(gallery);
         });

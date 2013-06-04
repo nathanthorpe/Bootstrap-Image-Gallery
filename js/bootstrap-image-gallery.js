@@ -143,7 +143,7 @@
             }, 3000);
             modal.find('.modal-title').text(this.$links[index].title);
             modal.find('.modal-download').prop(
-                'href', url
+                'href', this.$links[index].dl
             );
             this._loadingImage = loadImage(
                 url,
